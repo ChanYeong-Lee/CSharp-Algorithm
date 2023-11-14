@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _02.LinkedList_Deck
 {
-    internal class DeckManager
+    internal class DeckManager2
     {
         public Deck deck;
         public DeckManager()
@@ -16,6 +16,7 @@ namespace _02.LinkedList_Deck
 
         public void AddCard()
         {
+            Console.WriteLine("Input Your Deck (1~10)");
             while (deck.dealer.Count > 0)
             {
                 int number;
@@ -35,6 +36,7 @@ namespace _02.LinkedList_Deck
         {
             while (true)
             {
+                Console.WriteLine("(1) Pick Upper, (2) Pick Lower");
                 int input = int.Parse(Console.ReadLine());
                 switch (input)
                 {
