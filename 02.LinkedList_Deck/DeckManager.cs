@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _02.LinkedList_Deck
 {
-    internal class DeckManager2
+    internal class DeckManager
     {
         public Deck deck;
         public DeckManager()

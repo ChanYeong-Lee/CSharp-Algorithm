@@ -80,7 +80,7 @@
 
             // <foreach 반복문>
             // 자료구조의 데이터를 처음부터 끝까지 다 출력해주는 반복문
-            // Ienumerable 인터페이스를 가지고 있는 데이터이면 사용할 수    있다.
+            // Ienumerable 인터페이스를 가지고 있는 데이터이면 사용할 수 있다.
             foreach (int value in list)
             {
                 Console.WriteLine(value);

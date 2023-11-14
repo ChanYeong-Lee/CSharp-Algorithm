@@ -10,7 +10,6 @@ namespace _02.LinkedList_Deck
     {
         public LinkedList<int> deck = new LinkedList<int>();
         public LinkedList<int> dealer = new LinkedList<int>();
-        public delegate int Picker();
 
         public Deck()
         {
