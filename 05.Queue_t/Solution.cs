@@ -10,7 +10,7 @@ namespace _05.Queue_t
     {
         public static bool solution(string s)
         {
-            Stack<char> stack = new Stack<char>(s.Length);
+            Stack<char> stack = new Stack<char>(s.Length/2+1);
             foreach (char i in s)
             {
                 if (i == '(')
