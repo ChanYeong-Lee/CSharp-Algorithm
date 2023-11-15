@@ -50,4 +50,37 @@ namespace _05.Queue_t4
             return time;
         }
     }
+
+    public static class Solution2
+    {
+        public static int solution(int bridge_length, int weight, int[] truck_weights)
+        {
+            Queue<int> que = new Queue<int>();
+            int time = 0, count = 0, bridge = 0;
+
+            while (count < truck_weights.Length)
+            {
+                if (que.Count == bridge_length)
+                {
+                    bridge -= que.Dequeue();
+                }
+
+                if (bridge + truck_weights[count] <= weight)
+                {
+                    bridge += truck_weights[count];
+                    que.Enqueue(truck_weights[count]);
+                    count++;
+                }
+                else
+                {
+                    que.Enqueue(0);
+                }
+
+                time++;
+            }
+            time += bridge_length;
+
+            return time;
+        }
+    }
 }

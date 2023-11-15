@@ -63,7 +63,7 @@ namespace _03.Iterator
 
         static void Main(string[] args)
         {
-            Iterator.List<int> list = new Iterator.List<int>();
+            List<int> list = new List<int>();
             for (int i = 0; i < 5; i++) list.Add(i);
 
             foreach (int i in list) Console.WriteLine(i);
@@ -75,7 +75,7 @@ namespace _03.Iterator
             }
 
 
-            Iterator.LinkedList<int> linkedList = new Iterator.LinkedList<int>();
+            LinkedList<int> linkedList = new LinkedList<int>();
             for (int i = 0; i < 5; i++) linkedList.AddLast(i);
 
             foreach (int i in linkedList) Console.WriteLine(i);

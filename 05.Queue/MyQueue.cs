@@ -7,32 +7,32 @@ using System.Threading.Tasks;
 namespace _05.Queue
 {
     // <만약 Queue를 LinkedList로 만든다면...>
-    //internal class MyQueue<T>            
-    //{
-    //    private LinkedList<T> list;
-
-    //    public MyQueue()
-    //    {
-    //        list = new LinkedList<T>();
-    //    }
-
-    //    public int Count { get { return list.Count; } }
-
-    //    public void Enqueue(T item)
-    //    {
-    //        list.AddLast(item);
-    //    }
-
-    //    public T Dequeue()
-    //    {
-    //        // 만약 Queue를 List로 만든다면
-    //        // list.RemoveAt(0) <-- 굉장히 비효율적인 작업이 생성됨
-
-    //        T item = list.First();
-    //        list.RemoveFirst();   
-    //        return item;
-    //    }
-    //}                                     
+    // internal class MyQueue<T>            
+    // {
+    //     private LinkedList<T> list;
+       
+    //     public MyQueue()
+    //     {
+    //         list = new LinkedList<T>();
+    //     }
+       
+    //     public int Count { get { return list.Count; } }
+       
+    //     public void Enqueue(T item)
+    //     {
+    //         list.AddLast(item);
+    //     }
+       
+    //     public T Dequeue()
+    //     {
+    //         // 만약 Queue를 List로 만든다면
+    //         // list.RemoveAt(0) <-- 굉장히 비효율적인 작업이 생성됨
+       
+    //         T item = list.First();
+    //         list.RemoveFirst();   
+    //         return item;
+    //     }
+    // }                                     
     // 하지만 C#에서는 가비지 컬렉터가 DEQUEUE할 때마다 요소를 지워주어야 되기 때문에
     // LinkedList로 구현하지 않는다.
 
@@ -44,7 +44,7 @@ namespace _05.Queue
     // | 0 | 1 | 2 | 3 | 4 | 5 |   |
     //   h->                :DeQueue  제거 : h자리를 제거, h를 뒤로 한칸
     //       h                   t
-    // |   | 1 | 2 | 3 | 4 | 5 |   | 
+    // | 0 | 1 | 2 | 3 | 4 | 5 |   | 
 
     // <순환 구조> (원형/환형 배열)
     // 추가될 때 자리가 부족하면 앞의 자리를 빌린다.

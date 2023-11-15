@@ -6,10 +6,10 @@
     {
         static void Main(string[] args)
         {
-            int bridge_length = 100;
-            int weight = 100;
-            int[] truck_weights = { 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
-            int res = Solution.solution(bridge_length, weight, truck_weights);  
+            int bridge_length = 2;
+            int weight = 10;
+            int[] truck_weights = { 7, 4, 5, 6 };
+            int res = Solution2.solution(bridge_length, weight, truck_weights);  
             Console.WriteLine(res);
         }
     }
