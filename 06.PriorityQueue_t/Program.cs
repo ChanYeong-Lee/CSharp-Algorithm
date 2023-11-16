@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text;
 
 namespace _06.PriorityQueue_t
 {
@@ -7,41 +8,59 @@ namespace _06.PriorityQueue_t
 
     internal class Program
     {
+
+
+        public static PriorityQueue<int, int> maxHeap = new PriorityQueue<int, int>();
+        public static PriorityQueue<int, int> minHeap = new PriorityQueue<int, int>();
+        public static void maxtomin(int a)
+        {
+            minHeap.Enqueue(maxHeap.Peek(), maxHeap.Peek());
+            maxHeap.Dequeue();
+            maxHeap.Enqueue(a, -a);
+        }
+        public static void mintomax(int a)
+        {
+            maxHeap.Enqueue(minHeap.Peek(), -minHeap.Peek());
+            minHeap.Dequeue();
+            minHeap.Enqueue(a, a);
+        }
         static void Main(string[] args)
         {
-            PriorityQueue<int, int> pqP = new PriorityQueue<int, int>();
-            PriorityQueue<int, int> pqM = new PriorityQueue<int, int>();
+            StringBuilder sb = new StringBuilder();
+            int t;
+            t = int.Parse(Console.ReadLine());
+            int a;
 
-           
-            int amount = int.Parse(Console.ReadLine());
-            for (int i = 0; i < amount; i++)
+            for (int i = 1; i <= t; i++)
             {
-                int input = int.Parse(Console.ReadLine());
-                if (i % 2 == 0)
+                a = int.Parse(Console.ReadLine());
+                if (maxHeap.Count == 0)
                 {
-                    pqP.Enqueue(input, input);
-                    pqM.Enqueue(input, -input);
-                    Console.WriteLine(pqP.Peek());
+                    maxHeap.Enqueue(a, -a);
                 }
-                if (i % 2 == 1)
+                else if (minHeap.Count == 0)
                 {
-                    if (input > pqM.Peek())
-                    {
-                        pqP.Enqueue(input, input);
-                        pqM.Dequeue();
-                        pqM.Enqueue(pqP.Peek(), -pqP.Dequeue());
-                        Console.WriteLine(pqM.Peek());
-                    }
-                    else
-                    {
-                        pqP.Enqueue(pqM.Peek(), pqM.Dequeue());
-                        pqM.Enqueue(input, -input);
-                        Console.WriteLine(pqM.Peek());
-
-                    }
-
+                    if (maxHeap.Peek() > a) maxtomin(a);
+                    else minHeap.Enqueue(a, a);
                 }
+                else if (minHeap.Count > maxHeap.Count)
+                {
+                    if (minHeap.Peek() > a) maxHeap.Enqueue(a, -a);
+                    else mintomax(a);
+                }
+                else if (maxHeap.Count > minHeap.Count)
+                {
+                    if (maxHeap.Peek() >= a) maxtomin(a);
+                    else minHeap.Enqueue(a, a);
+                }
+                else
+                { //둘의 사이즈가 같다
+                    if (minHeap.Peek() > a) maxHeap.Enqueue(a, -a);
+                    else mintomax(a);
+                }
+                sb.AppendLine(maxHeap.Peek().ToString());
             }
+            Console.Write(sb);
         }
     }
 }
