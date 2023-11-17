@@ -1,11 +1,10 @@
-﻿namespace NOTE
+﻿namespace _08.Dictionary_t
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            NewClass nc = new NewClass();
-            nc.HelloToWorld();
+           Game.GetInstance().GameStart();
         }
     }
-}
+} 

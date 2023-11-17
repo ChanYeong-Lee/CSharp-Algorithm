@@ -25,13 +25,17 @@ namespace _06.PriorityQueue_t2
                     }
 
                 }
-                if (minHeap.Count != 0&&process.Count==0)   // 작업 큐가 비어있을때
+                if (minHeap.Count != 0 && process.Count == 0)   // 작업 큐가 비어있을때
                 {
                     for (int i = 0; i < minHeap.Peek(); i++)
                     {
                         process.Enqueue(1);                 // 소요시간만큼 1을 Enqueue
                     }
                     minHeap.Dequeue();                      // 우선순위 큐에서 내보내기
+                }
+                if (minHeap.Count == 0 && process.Count == 0) // 작업 중도 아니고, 대기 중인 작업도 없는 경우
+                {
+                    sum--;
                 }
                 if (process.Count != 0)                      // 작업 중 초당 1개씩 내보내기
                 {
@@ -46,10 +50,13 @@ namespace _06.PriorityQueue_t2
                     sum += minHeap.Count;                   // 현재 대기중인 작업*1초
                 }
                 count++;                                    // 1초 흘리기
+
+
             }
 
 
-            return (count + sum)/ jobs.GetLength(0);
+
+            return (count + sum) / jobs.GetLength(0);
         }
     }
 }
