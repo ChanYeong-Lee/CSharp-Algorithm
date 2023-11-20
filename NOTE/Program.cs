@@ -4,8 +4,10 @@
     {
         static void Main(string[] args)
         {
-            NewClass nc = new NewClass();
-            nc.HelloToWorld();
+            char[] chars = new char[3] { 'a', 'b', 'c' };
+            string my_string = "helloworld";
+            Solution solution = new Solution();
+            Console.Write(solution.solution(my_string));
         }
     }
 }

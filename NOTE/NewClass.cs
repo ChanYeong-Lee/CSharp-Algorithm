@@ -6,20 +6,23 @@ using System.Threading.Tasks;
 
 namespace NOTE
 {
-    internal class NewClass
+    public class Solution
     {
-        public void Hello()
+        public string solution(string my_string)
         {
-            Console.Write("Hello ");
-        }
-        public void World()
-        {
-            Console.Write("World!");
-        }
-        public void HelloToWorld()
-        {
-            Hello();
-            World();
+            List<char> ansList = new List<char>();
+            char[] removeList = new char[5] { 'a', 'e', 'i', 'o', 'u' };
+            {
+                for (int i = 0; i < my_string.Length; i++)
+                {
+                    if (removeList.Contains(my_string[i]))
+                        continue;
+                    else
+                        ansList.Add(my_string[i]);
+                }
+            }
+            string answer = new string(ansList.ToArray());
+            return answer;
         }
     }
 }
