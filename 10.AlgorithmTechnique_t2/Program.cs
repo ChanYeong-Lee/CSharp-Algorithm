@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-            HanoiTower hanoi = new HanoiTower();
-            hanoi.Hanoi();
+            HanoiTower hanoi = new HanoiTower(6);
+            hanoi.Move(0, 2, 6);
         }
     }
 }

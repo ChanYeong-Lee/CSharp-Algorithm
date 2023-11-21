@@ -49,9 +49,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.Dictionary_t", "08.Dicti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10.AlgorithmTechnique", "10.AlgorithmTechnique\10.AlgorithmTechnique.csproj", "{F9458C78-0C60-456D-B58D-F6D89229A482}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.AlgorithmTechnique_t", "10.AlgorithmTechnique_t\10.AlgorithmTechnique_t.csproj", "{08C084F0-747E-4A3C-B664-3312BBCDB921}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10.AlgorithmTechnique_t", "10.AlgorithmTechnique_t\10.AlgorithmTechnique_t.csproj", "{08C084F0-747E-4A3C-B664-3312BBCDB921}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.AlgorithmTechnique_t2", "10.AlgorithmTechnique_t2\10.AlgorithmTechnique_t2.csproj", "{19A44892-B537-4055-B88B-08C9A44FC6F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10.AlgorithmTechnique_t2", "10.AlgorithmTechnique_t2\10.AlgorithmTechnique_t2.csproj", "{19A44892-B537-4055-B88B-08C9A44FC6F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.Sorting", "10.Sorting\10.Sorting.csproj", "{FD66C1A3-FF7F-4BE0-AF85-47D6C827B085}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -159,6 +161,10 @@ Global
 		{19A44892-B537-4055-B88B-08C9A44FC6F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19A44892-B537-4055-B88B-08C9A44FC6F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19A44892-B537-4055-B88B-08C9A44FC6F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD66C1A3-FF7F-4BE0-AF85-47D6C827B085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD66C1A3-FF7F-4BE0-AF85-47D6C827B085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD66C1A3-FF7F-4BE0-AF85-47D6C827B085}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD66C1A3-FF7F-4BE0-AF85-47D6C827B085}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
