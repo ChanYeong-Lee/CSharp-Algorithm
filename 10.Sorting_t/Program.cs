@@ -1,4 +1,4 @@
-﻿namespace _10.Sorting_t
+﻿namespace _11.Sorting_t
 {
     internal class Program
     {

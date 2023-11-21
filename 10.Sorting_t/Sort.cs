@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _10.Sorting_t
+namespace _11.Sorting_t
 {
     public class Sort
     {
