@@ -41,12 +41,9 @@ namespace _10.Sorting
                 int j;
                 for (j = i - 1; j >= 0 && key < list[j]; j--)
                 {
-                    for (j = i - 1; j >= 0 && key < list[j]; j--)
-                    {
-                        list[j + 1] = list[j];
-                    }
-                    list[j + 1] = key;
+                    list[j + 1] = list[j];
                 }
+                list[j + 1] = key;
             }
         }
 
@@ -115,7 +112,7 @@ namespace _10.Sorting
         // 공간복잡도 - O(N)
         // 안정정렬   - O
         public static void MergeSort(IList<int> list, int left, int right)
-        {
+        { 
             if (left == right) return;
 
             int mid = (left + right) / 2;
