@@ -14,9 +14,9 @@
             List<int> quickList = new List<int>();
 
             Console.WriteLine("랜덤 데이터 : ");
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 30; i++)
             {
-                int rand = random.Next() % 10;
+                int rand = random.Next() % 30;
                 Console.Write(string.Format("{0} ", rand));
 
                 selectionList.Add(rand);

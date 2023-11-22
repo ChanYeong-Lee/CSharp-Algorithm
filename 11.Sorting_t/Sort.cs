@@ -25,8 +25,8 @@ namespace _11.Sorting_t
         }
 
         // <삽입 정렬>
-        // index 1부터 끝까지 순서대로 key로 정하고 
-        // 앞의 값들과 비교해서 정렬
+        // index 1부터 끝까지 순서대로 key로 정하고                 
+        // 앞의 값들과 비교해서 정렬                              
         public static void InsertionSort(IList<int> list)
         {
             for (int i = 1; i < list.Count; i++)                // index 1부터 끝까지
@@ -47,7 +47,7 @@ namespace _11.Sorting_t
         {
             for (int i = 0; i < list.Count; i++)        // 배열의 크기만큼 반복
             {
-                for (int j = 1; j < list.Count; j++)    // index 1부터 끝까지
+                for (int j = 1; j < list.Count-i; j++)    // index 1부터 끝까지
                 {
                     if (list[j - 1] > list[j])          // 붙어있는 값끼리 비교
                         Swap(list, j - 1, j);           // 더 작은 것을 왼쪽으로
@@ -61,7 +61,7 @@ namespace _11.Sorting_t
         // mid = 4
         // mid = 2
         // mid = 1
-        // 되서 0부터 1까지 정렬(왼쪽리스트), 3정렬(아무것도 안함,오른쪽 리스트)
+        // 되서 0부터 1까지 정렬(왼쪽리스트), 2정렬(아무것도 안함,오른쪽 리스트)
         // 0 부터 2까지 정렬(왼쪽 리스트)
         // 3부터 4까지 정렬(오른쪽 리스트)
         // 0부터 4까지 정렬(왼쪽 리스트)
@@ -143,7 +143,6 @@ namespace _11.Sorting_t
             QuickSort(list, start, j - 1);                      // j-1이 start가 될떄까지 반복
             QuickSort(list, j + 1, end);                        // end가 
         }
-
 
         // <힙 정렬>
         // 힙을 만든 뒤, (최대값이 첫번쨰 짜리로, list.Count/2-1을 기준으로 오른쪽에 더 작은 값들을 저장)
