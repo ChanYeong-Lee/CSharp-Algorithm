@@ -68,7 +68,6 @@ namespace _12.Searching_t2
                     }
                 }
             }
-
         }
     }
 }
