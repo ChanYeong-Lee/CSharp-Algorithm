@@ -20,16 +20,16 @@
             bool[] dijkstraVisited;
             int[] dijkstraParent;
             int[] dijkstraDistance;
-            Dijkstra.ShortestPath
-                (
-                in graph, 
-                0, 
-                out dijkstraVisited, 
-                out dijkstraParent,
-                out dijkstraDistance 
-                );
+            Dijkstra.ShortestPath(in graph, 0, out dijkstraVisited, out dijkstraParent, out dijkstraDistance);
             Console.WriteLine("<Dijkstra>");
             Dijkstra.PrintDijkstra(dijkstraVisited, dijkstraParent, dijkstraDistance);
+            Console.WriteLine();
+
+            int[,] costTable;
+            int[,] pathTable;
+            FloydWarshall.ShortestPath(in graph, out costTable, out pathTable);
+            Console.WriteLine("<Floyd-Warshall>");
+            FloydWarshall.PrintFloydWarshall(costTable, pathTable);
         }
     }
 }

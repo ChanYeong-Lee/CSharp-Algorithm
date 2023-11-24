@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _13.ShortestPath_t
 {
-    internal class Dijsktra
+    public class Dijkstra
     {
         const int INF = 99999;
 
