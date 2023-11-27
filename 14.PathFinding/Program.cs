@@ -4,22 +4,22 @@
     {
         static void Main(string[] args)
         {
-            bool[,] tileMap = new bool[9, 9]
-            {
-                { false, false, false, false, false, false, false, false, false },
-                { false,  true,  true,  true, false, false, false,  true, false },
-                { false,  true, false,  true, false, false, false,  true, false },
-                { false,  true, false,  true,  true,  true,  true,  true, false },
-                { false,  true, false,  true, false,  true,  true,  true, false },
-                { false,  true, false,  true, false,  true,  true,  true, false },
-                { false, false, false, false, false, false, false,  true, false },
-                { false,  true,  true,  true,  true,  true,  true,  true, false },
-                { false, false, false, false, false, false, false, false, false },
-            };
+            bool[,] tileMap = new bool[8, 9]
+                        {
+                { false, false, false, false, false, false, false , false , false },
+                { false,  true,  true,  true,  true,  true,  true ,  true , false },
+                { false,  true,  true,  true, false,  true,  true ,  true , false },
+                { false,  true,  true,  true, false,  true,  true ,  true , false },
+                { false,  true,  true,  true, false,  true,  true ,  true , false },
+                { false,  true,  true,  true, false,  true,  true ,  true , false },
+                { false,  true,  true,  true,  true,  true,  true ,  true , false },
+                { false, false, false, false, false, false, false , false , false },
+                        };
             List<AStar.Point> path;
-
-            AStar.PathFinding(tileMap, new AStar.Point(1, 1), new AStar.Point(7, 6), true, out path);
+            bool[,] visited;
+            AStar.PathFinding(tileMap, new AStar.Point(2, 5), new AStar.Point(6, 3), true, out path, out visited);
             PrintResult(tileMap, path);
+            PrintVisited(visited);
         }
         static void PrintResult(in bool[,] tileMap, in List<AStar.Point> path)
         {
@@ -50,6 +50,21 @@
                 for (int j = 0; j < pathMap.GetLength(1); j++)
                 {
                     Console.Write(pathMap[i, j]);
+                }
+                Console.WriteLine();
+            }
+        }
+        static void PrintVisited(bool[,] visited)
+        {
+            Console.WriteLine("Visited");
+            for (int i = 0; i < visited.GetLength(0); i++)
+            {
+                for (int j = 0; j < visited.GetLength(1); j++)
+                {
+                    if (visited[i, j])
+                        Console.Write("O");
+                    else
+                        Console.Write("X");
                 }
                 Console.WriteLine();
             }

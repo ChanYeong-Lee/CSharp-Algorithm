@@ -31,13 +31,13 @@ namespace _14.PathFinding
             new Point( +1, -1 ),        // 우하
         };
 
-        public static bool PathFinding(in bool[,] tileMap, in Point start, in Point end, in bool cross, out List<Point> path)
+        public static bool PathFinding(in bool[,] tileMap, in Point start, in Point end, in bool cross, out List<Point> path, out bool[,] visited)
         {
             int ySize = tileMap.GetLength(0);
             int xSize = tileMap.GetLength(1);
 
             ASNode[,] nodes = new ASNode[ySize, xSize];
-            bool[,] visited = new bool[ySize, xSize];
+            visited = new bool[ySize, xSize];
             PriorityQueue<ASNode, int> nextPointPQ = new PriorityQueue<ASNode, int>();
 
             // 0. 시작 정점을 생성하여 추가
@@ -91,6 +91,7 @@ namespace _14.PathFinding
                     // 대각선으로 이동이 불가능한 지역인 경우
                     else if (i >= 4)
                     {
+                        continue;
                         if (!tileMap[y, nextNode.point.x] && !tileMap[nextNode.point.y, x])
                             continue;
                         if (cross && tileMap[y, nextNode.point.x] ^ tileMap[nextNode.point.y, x])

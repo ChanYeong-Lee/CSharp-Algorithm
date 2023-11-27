@@ -4,19 +4,21 @@
     {
         static void Main(string[] args)
         {
-            bool[,] tileMap = new bool[6, 7]
+            bool[,] tileMap = new bool[8, 9]
                         {
-                {  true,  true,  true,  true,  true,  true,  true },
-                {  true,  true,  true, false,  true,  true,  true },
-                {  true,  true,  true, false,  true,  true,  true },
-                {  true,  true,  true, false,  true,  true,  true },
-                {  true,  true,  true, false,  true,  true,  true },
-                {  true,  true,  true,  true,  true,  true,  true },
+                { false, false, false, false, false, false, false , false , false },
+                { false,  true,  true,  true,  true,  true,  true ,  true , false },
+                { false,  true,  true,  true, false,  true,  true ,  true , false },
+                { false,  true,  true,  true, false,  true,  true ,  true , false },
+                { false,  true,  true,  true, false,  true,  true ,  true , false },
+                { false,  true,  true,  true, false,  true,  true ,  true , false },
+                { false,  true,  true,  true,  true,  true,  true ,  true , false },
+                { false, false, false, false, false, false, false , false , false },
                         };
             List<AStar.Point> path;
             bool[,] visited;
 
-            AStar.PathFinding(tileMap, new AStar.Point(1, 4), new AStar.Point(5, 2), false, out path, out visited, "Manhattan");
+            AStar.PathFinding(tileMap, new AStar.Point(2, 5), new AStar.Point(6, 3), false, out path, out visited, "Manhattan");
             PrintResult(tileMap, path);
             Console.WriteLine();
             PrintVisited(visited);

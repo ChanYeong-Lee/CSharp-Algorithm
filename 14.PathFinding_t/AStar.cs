@@ -42,13 +42,13 @@ namespace _14.PathFinding_t
             visited = new bool[ySize, xSize];
             PriorityQueue<ASNode, int> nextPQ = new PriorityQueue<ASNode, int>();
 
-            for (int i = 0; i < ySize; i++)
-            {
-                for (int j = 0; j < xSize; j++)
-                {
-                    visited[i, j] = false;
-                }
-            }
+            //for (int i = 0; i < ySize; i++)
+            //{
+            //    for (int j = 0; j < xSize; j++)
+            //    {
+            //        visited[i, j] = false;
+            //    }
+            //}
 
             ASNode startNode = new ASNode(start, null, 0, Heuristic(start, end, keyward));
             nodes[startNode.point.y, startNode.point.x] = startNode;
