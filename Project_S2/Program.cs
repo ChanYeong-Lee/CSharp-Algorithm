@@ -1,10 +1,11 @@
-﻿namespace _16._Singleton
+﻿namespace Project_S2
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Game game = new Game();
+            game.Run();
         }
     }
 }

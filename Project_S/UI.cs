@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project_S3
+namespace Project_S
 {
-    internal class Player
+    internal class UI
     {
         public int posX;//ss
         public int posY;
