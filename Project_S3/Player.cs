@@ -8,7 +8,7 @@ namespace Project_S3
 {
     internal class Player
     {
-        public int posX;
+        public int posX;//ss
         public int posY;
     }
 }
