@@ -8,5 +8,7 @@ namespace Project_S
 {
     internal class UI
     {
+        public int posX;//ss
+        public int posY;
     }
 }
