@@ -73,7 +73,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14.PathFinding_t", "14.Path
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "15.MinimumSpanningTree", "15.MinimumSpanningTree\15.MinimumSpanningTree.csproj", "{50B34408-66CD-44CE-93AF-F97BB569A305}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project_S", "Project_S\Project_S.csproj", "{513DE527-E58A-426F-A807-B87DFACFAB84}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_S", "Project_S\Project_S.csproj", "{513DE527-E58A-426F-A807-B87DFACFAB84}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_S3", "Project_S3\Project_S3.csproj", "{367A4DE8-951B-47A1-A873-3BBBACD5A72A}"
 EndProject

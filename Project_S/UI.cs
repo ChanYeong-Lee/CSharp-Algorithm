@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _16.DesignPattern
+namespace Project_S
 {
-    
+    internal class UI
+    {
+    }
 }
