@@ -1,4 +1,4 @@
-﻿namespace Project_S
+﻿namespace Project_S3
 {
     internal class Program
     {

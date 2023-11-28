@@ -1,4 +1,4 @@
-﻿namespace Project_S
+﻿namespace _16.Singleton_t
 {
     internal class Program
     {
